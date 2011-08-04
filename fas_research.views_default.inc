@@ -117,6 +117,39 @@ function fas_research_views_default_views() {
       'field' => 'field_url_url',
       'relationship' => 'none',
     ),
+    'field_pubdetails_value' => array(
+      'label' => 'Publication details',
+      'alter' => array(
+        'alter_text' => 0,
+        'text' => '',
+        'make_link' => 0,
+        'path' => '',
+        'alt' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'help' => '',
+        'trim' => 0,
+        'max_length' => '',
+        'word_boundary' => 1,
+        'ellipsis' => 1,
+        'strip_tags' => 0,
+        'html' => 0,
+      ),
+      'link_to_node' => 0,
+      'label_type' => 'widget',
+      'format' => 'default',
+      'multiple' => array(
+        'group' => TRUE,
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_reversed' => FALSE,
+      ),
+      'exclude' => 0,
+      'id' => 'field_pubdetails_value',
+      'table' => 'node_data_field_pubdetails',
+      'field' => 'field_pubdetails_value',
+      'relationship' => 'none',
+    ),
     'field_pubdate_value' => array(
       'label' => 'Publication date',
       'alter' => array(
@@ -203,7 +236,7 @@ function fas_research_views_default_views() {
   $handler->override_option('cache', array(
     'type' => 'none',
   ));
-  $handler->override_option('title', 'In the News');
+  $handler->override_option('title', 'In the news');
   $handler->override_option('style_plugin', 'table');
   $handler->override_option('style_options', array(
     'grouping' => '',
