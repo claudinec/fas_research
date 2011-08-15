@@ -65,11 +65,16 @@ function fas_research_content_default_fields() {
     'widget' => array(
       'rows' => 5,
       'size' => '60',
-      'default_value' => NULL,
+      'default_value' => array(
+        '0' => array(
+          'value' => '',
+          '_error_element' => 'default_value_widget][field_rsch_other][0][value',
+        ),
+      ),
       'default_value_php' => NULL,
       'label' => 'Researchers (other)',
       'weight' => '-1',
-      'description' => '',
+      'description' => 'Comma-separated list of names.',
       'type' => 'text_textfield',
       'module' => 'text',
     ),
@@ -221,7 +226,7 @@ function fas_research_content_default_fields() {
         ),
       ),
       'default_value_php' => NULL,
-      'label' => 'Researchers (users)',
+      'label' => 'Researchers (staff)',
       'weight' => '-2',
       'description' => '',
       'type' => 'userreference_autocomplete',
@@ -232,7 +237,7 @@ function fas_research_content_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Researchers (other)');
-  t('Researchers (users)');
+  t('Researchers (staff)');
   t('Status');
 
   return $fields;

@@ -567,6 +567,7 @@ function fas_research_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('title', 'Research Projects');
+  $handler->override_option('use_pager', '1');
   $handler->override_option('style_plugin', 'table');
   $handler->override_option('style_options', array(
     'grouping' => 'field_rsch_status_value',
